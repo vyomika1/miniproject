@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+      
+        section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home {
+            text-align: center;
+        }
+
+        .service, .vendor, .venue, .invite {
+            text-align: center;
+        }
+        
+     
+        .head {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .home {
+            padding-top: 60px; /* padding to prevent overlap with the fixed header */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="head">
+        <a href="#" class="logo">Wed<span>Me</span>Good</a>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#service">Service</a>
+            <a href="#vendor">Vendors</a>
+            <a href="#venue">Venue</a>
+            <a href="#footer">Contact</a>
+        </nav>
+        <div id="menu-bar"><i class="fas fa-bars"></i></div>
+    </header>
+    
+    
+    <section class="home" id="home">
+        <div class="home-slider">
+            <div class="home-slide active" style="background-image: url('back-1.jpg');"></div>
+            <div class="home-slide" style="background-image: url('venue-1.jpg');"></div>
+            <div class="home-slide" style="background-image: url('venue-2.jpg');"></div>
+        </div>
+    </section>
+    
+        
+        <!-- <div class="search-box" style="text-align: center;">
+            <form action="#">
+                <h1>Your Dream Wedding</h1>
+                <p>Discover and book the best wedding vendors.</p>
+                <div class="search-fields">
+                    <select class="search-field" style="margin-left: 50px;">
+                        <option disabled selected>Vendor Type</option>
+                        <option value="Wedding Venues">Wedding Venues</option>
+                        <option value="Family Makeup">Family Makeup</option>
+                        <option value="Bridal Makeup">Bridal Makeup</option>
+                        <option value="Groom Wear">Groom Wear</option>
+                        <option value="Wedding Decoration">Wedding Decoration</option>
+                    </select>
+                    <select class="search-field" style="margin-left: 50px;">
+                        <option disabled selected>City</option>
+                        <option value="Anand">Anand</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Baroda">Baroda</option>
+                        <option value="Goa">Goa</option>
+                    </select>
+                </div>
+                <button class="btn">Search</button>
+            </form>
+        </div> -->
+    </section>
+    
+
+
+    <section class="service" id="service">
+        <!-- <div class="title">
+            <h1><span>S</span>ervice</h1>
+        </div> -->
+        <div class="services-row">
+            <div class="services-col">
+                <i class="fas fa-book-open"></i>
+                <h2>Invitation</h2>
+                <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
+            </div>
+            <div class="services-col">
+                <i class="fas fa-camera"></i>
+                <h2>Photography & Video</h2>
+                <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
+            </div>
+            <div class="services-col">
+                <i class="fas fa-brush"></i>
+                <h2>Beauty & Makeup</h2>
+                <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
+            </div>
+            <div class="services-col">
+                <i class="fab fa-pagelines"></i>
+                <h2>Wedding Flowers</h2>
+                <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
+            </div>
+            <div class="services-col">
+                <i class="fas fa-birthday-cake"></i>
+                <h2>Wedding Cake</h2>
+                <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
+            </div>
+            <div class="services-col">
+                <i class="fas fa-music"></i>
+                <h2>Music Band</h2>
+                <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
+            </div>
+            <div class="services-col">
+                <i class="fas fa-utensils"></i>
+                <h2>Catering</h2>
+                <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
+            </div>
+            <div class="services-col">
+                <i class="fas fa-ring"></i>
+                <h2>Jewellery</h2>
+                <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="vendor" id="vendor">
+        <div class="vendor-carousel">
+            <div class="vendor-list">
+                <div class="vendor-row">
+                    <img src="im1.jpg" alt="Beauty tales by Komal Rai">
+                    <div class="vendor-info">
+                        <div class="rate">4.5&nbsp;<i class="fa fa-star" aria-hidden="true"></i></div>
+                        <h2 class="h2">MAKE UP</h2>
+                        <p class="p">Bridal Makeup</p>
+                        <h3 class="h3">Rs.20,000 onwards</h3>
+                    </div>
+                </div>
+                <div class="vendor-row">
+                    <img src="im2.jpg" alt="Flinters Management">
+                    <div class="vendor-info">
+                        <div class="rate">4.2&nbsp;<i class="fa fa-star" aria-hidden="true"></i></div>
+                        <h2 class="h2">Flinters Management</h2>
+                        <p class="p">Wedding Planner</p>
+                        <h3 class="h3">Rs.2.5-4 Lakh</h3>
+                    </div>
+                </div>
+                <div class="vendor-row">
+                    <img src="im3.jpg" alt="Wedding Mela">
+                    <div class="vendor-info">
+                        <div class="rate">5.0&nbsp;<i class="fa fa-star" aria-hidden="true"></i></div>
+                        <h2 class="h2">Wedding Mela</h2>
+                        <p class="p">Wedding Decorators</p>
+                        <h3 class="h3">Rs.80,000-30,00,000</h3>
+                    </div>
+                </div>
+                <div class="vendor-row">
+                    <img src="im4.jpg" alt="SeventhHeaven Wedding Company">
+                    <div class="vendor-info">
+                        <div class="rate">4.1&nbsp;<i class="fa fa-star" aria-hidden="true"></i></div>
+                        <h2 class="h2">SeventhHeaven Wedding Company</h2>
+                        <p class="p">Wedding Decorators-Rental Only</p>
+                        <h3 class="h3">Rs.80,000 Onwards</h3>
+                    </div>
+                </div>
+                <div class="vendor-row">
+                    <img src="im5.jpg" alt="Wedding Mela">
+                    <div class="vendor-info">
+                        <div class="rate">4.3&nbsp;<i class="fa fa-star" aria-hidden="true"></i></div>
+                        <h2 class="h2">Wedding Mela</h2>
+                        <p class="p">Wedding Decorators</p>
+                        <h3 class="h3">Rs.80,000-30,00,000</h3>
+                    </div>
+                </div>
+                <div class="vendor-row">
+                    <img src="im6.jpg" alt="Wedding Mela">
+                    <div class="vendor-info">
+                        <div class="rate">4.0&nbsp;<i class="fa fa-star" aria-hidden="true"></i></div>
+                        <h2 class="h2">Wedding Mela</h2>
+                        <p class="p">Wedding Decorators</p>
+                        <h3 class="h3">Rs.1.8 Lakh</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+            <div class="carousel-dots">
+                <span class="active" data-slide="0"></span>
+                <span data-slide="1"></span>
+                <span data-slide="2"></span>
+                <span data-slide="3"></span>
+                <span data-slide="4"></span>
+            </div>
+            
+        </div>
+    </section>
+    
+    
+    <section class="venue" id="venue">
+       
+            <div class="venue-list">
+                <div class="venue-box" onclick="window.location.href='venue-1-details.html'" style="animation-delay: 0s;">
+                    <div class="venue-description">
+                        <h2>Wedmegood</h2>
+                            <h3 class="wedding-venue">Venue</h3>
+                       
+                        
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. 
+                            <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. </p>
+                            <span class="wpr-button-text">Read More</span>
+
+                        </div>
+                    <div>
+                        <img src="venue-1.jpg" alt="Venue 1">
+                    </div>
+                    
+                   
+                </div>
+            </div>
+                <!-- <div class="venue-box" onclick="window.location.href='venue-5-details.html'" style="animation-delay: 0.5s;">
+                    <img src="venue-5.jpg" alt="img">
+                    <div class="venue-description">
+                        <h3>Goa</h3>
+                        <p>Azaya Beach Resort, Goa</p>
+                        <p>Price: Rs. XXXX</p>
+                    </div>
+                </div>
+                <div class="venue-box" onclick="window.location.href='venue-2-details.html'" style="animation-delay: 1s;">
+                    <img src="venue-2.jpg" alt="img">
+                    <div class="venue-description">
+                        <h3>Jaipur</h3>
+                        <p>The Raj Palace</p>
+                        <p>Price: Rs. XXXX</p>
+                    </div>
+                </div>
+                <div class="venue-box" onclick="window.location.href='venue-3-details.html'" style="animation-delay: 1.5s;">
+                    <img src="venue-3.jpg" alt="img">
+                    <div class="venue-description">
+                        <h3>Udaipur</h3>
+                        <p>Taj Aravalli Resort and Spa</p>
+                        <p>Price: Rs. XXXX</p>
+                    </div>
+                </div>
+                <div class="venue-box" onclick="window.location.href='venue-4-details.html'" style="animation-delay: 2s;">
+                    <img src="venue-4.jpg" alt="img">
+                    <div class="venue-description">
+                        <h3>Thailand</h3>
+                        <p>Prince Palace Hotel</p>
+                        <p>Price: Rs. XXXX</p>
+                    </div>
+                </div>
+                <div class="venue-box" onclick="window.location.href='venue-6-details.html'" style="animation-delay: 2.5s;">
+                    <img src="venue-6.jpg" alt="img">
+                    <div class="venue-description">
+                        <h3>Daman</h3>
+                        <p>The Deltin, Daman</p>
+                        <p>Price: Rs. XXXX</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-arrow left"><i class="fas fa-chevron-left"></i></div>
+            <div class="carousel-arrow right"><i class="fas fa-chevron-right"></i></div>
+        </div> -->
+    </section>
+    
+    <section class="form-container" id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <br>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <br>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <br>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <br>
+                <br>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+    
+    
+    
+
+    <footer class="footer" id="footer">
+        <div class="container">
+           
+            <div class="footer-section">
+                <h2>Wedmegood</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. </p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fas fa-phone-alt"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Spaces</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+       
+            <div class="footer-section">
+                <h2>Contact</h2>
+                <p><strong>+91 XXXXXXXXXX</strong></p>
+                <p><a href="mailto:info@Wedmegood.in">info@wedmegood.in</a></p>
+                <p>wedmegood, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec</p>
+                <a href="#">Get Directions</a>
+            </div>
+        </div>
+        <!-- Copyright Section -->
+        <div class="copyright">
+            <p>&copy; 2022 All Rights Reserved | Wedmegood</p>
+        </div>
+    </footer>
+    
+    
+    <script>
+        let menu = document.querySelector('#menu-bar');
+        let head = document.querySelector('.head .navbar');
+
+        menu.onclick = () => {
+            head.classList.toggle('active');
+        };
+
+        window.onscroll = () => {
+            head.classList.remove('active');
+            if (window.scrollY > 60) {
+                document.querySelector('#menu-bar').classList.add('active');
+            } else {
+                document.querySelector('#menu-bar').classList.remove('active');
+            }
+        };
+
+    document.getElementById('menu-bar').addEventListener('click', function () {
+        document.querySelector('.navbar').classList.toggle('active');
+    });
+
+
+    </script>
+
+
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    const vendorList = document.querySelector(".vendor-list");
+    const vendorRows = document.querySelectorAll(".vendor-row");
+    const dots = document.querySelectorAll('.carousel-dots span');
+    let currentIndex = 0;
+    const totalSlides = vendorRows.length;
+
+    function updateCarousel() {
+        const width = vendorRows[0].clientWidth;
+        vendorList.style.transform = `translateX(${-currentIndex * width}px)`;
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    function goToSlide(index) {
+        currentIndex = (index + totalSlides) % totalSlides;
+        updateCarousel();
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToSlide(index));
+    });
+
+    updateCarousel(); 
+    window.addEventListener('resize', updateCarousel);
+});
+
+</script>
+
+<!-- <script>
+ 
+    document.addEventListener("DOMContentLoaded", function() {
+        const leftArrow = document.querySelector(".venue .left");
+        const rightArrow = document.querySelector(".venue .right");
+        const venueList = document.querySelector('.venue-list');
+        let currentPosition = 0;
+        const slideWidth = document.querySelector('.venue-box').offsetWidth;
+
+        leftArrow.addEventListener('click', function() {
+            slideLeft();
+        });
+
+        rightArrow.addEventListener('click', function() {
+            slideRight();
+        });
+
+        function slideLeft() {
+            currentPosition -= slideWidth;
+            if (currentPosition < 0) {
+                currentPosition = (document.querySelectorAll('.venue-box').length - 1) * slideWidth;
+            }
+            venueList.style.transform = `translateX(-${currentPosition}px)`;
+        }
+
+        function slideRight() {
+            currentPosition += slideWidth;
+            if (currentPosition > (document.querySelectorAll('.venue-box').length - 1) * slideWidth) {
+                currentPosition = 0;
+            }
+            venueList.style.transform = `translateX(-${currentPosition}px)`;
+        }
+    });
+</script> -->
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        console.log('Name:', name);
+        console.log('Email:', email);
+        console.log('Message:', message);
+
+        // Here you can add your AJAX request to send the form data to the server
+
+        alert('Form submitted successfully!');
+    });
+</script>
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 3000); // Change image every 3 seconds
+}
+
+
+
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,548 @@
+.head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #FFF; /* Solid white background */
+    padding: 1rem 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: auto; /* Enable horizontal scrolling for small screens */
+    background-image: url("path/to/your/image.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.head .logo {
+    font-size: 2rem;
+    color: #5E503F;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.head .logo span {
+    color: #C68F52;
+}
+
+.head .navbar {
+    display: flex;
+    align-items: center;
+    padding-right: 2rem; /* Adjusted padding */
+}
+
+.head .navbar a {
+    font-size: 1.5rem;
+    color: #5E503F;
+    margin: 0 1rem; /* Adjusted margin */
+    text-decoration: none;
+}
+
+.head .navbar a:hover,
+.head .navbar a.active {
+    color: #C68F52;
+}
+
+#menu-bar {
+    display: none;
+    font-size: 2rem;
+    color: #5E503F;
+    cursor: pointer;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .head {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        padding: 1rem 2%;
+    }
+
+    .head .navbar {
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem; /* Adjusted margin top for better spacing */
+    }
+
+    .head .navbar a {
+        margin: 0.5rem;
+        font-size: 1.3rem; /* Adjusted font size for smaller screens */
+    }
+
+    #menu-bar {
+        display: block;
+        margin-top: 1rem;
+    }
+}
+
+
+
+
+
+/* Responsive Navigation */
+/* @media (max-width: 768px) {
+    .head {
+        flex-direction: column; 
+        align-items: center;
+        padding: 1rem 2%;
+    }
+
+    .head .navbar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .head .navbar a {
+        margin: 0.5rem;
+    }
+
+    #menu-bar {
+        display: block;
+        margin-top: 1rem;
+    }
+} */
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFF;
+}
+
+.home-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.home-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.home-slide.active {
+    opacity: 1;
+    transform: scale(1); /* Active slide fully visible */
+}
+
+.home-slide.next {
+    transform: scale(1.1); /* Next slide slightly zoomed */
+    opacity: 0; /* Start with next slide hidden */
+}
+.active {
+    transform: scale(1.05); /* Adjust the scale factor for zoom out */
+}
+
+
+
+/* Services Section */
+.services-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.services-col {
+    background-color: var(--clr3);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-col:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.services-col i {
+    padding: 1.5rem;
+    border: none;
+    background: var(--clr6);
+    border-radius: 50%;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.services-col h2 {
+    font-size: 1.8rem;
+    color: var(--clr4);
+    margin-bottom: 1rem;
+}
+
+.services-col p {
+    font-size: 1.2rem;
+    color: var(--clr4);
+    line-height: 1.5;
+}
+
+/* Vendor Section */
+.vendor-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vendor-list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.vendor .vendor-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 2rem;
+    text-align: left;
+}
+
+.vendor-row img {
+    width: 50%;
+    max-height: 70vh;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.vendor-info {
+    width: 50%;
+    padding: 2rem;
+}
+
+.vendor-info .rate {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    background: var(--clr1);
+    color: var(--clr3);
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.vendor-info h2 {
+    font-size: 2.4rem;
+    color: var(--clr4);
+    margin-bottom: 0.5rem;
+}
+
+.vendor-info p {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.vendor-info h3 {
+    font-size: 1.8rem;
+    color: var(--clr2);
+}
+
+.carousel-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.carousel-dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-dots span.active {
+    background: var(--clr2); /* Assuming var(--clr2) is your desired active color */
+    border: 2px solid #fff;
+}
+
+.carousel-arrow {
+    display: none;
+}
+
+.vendor .vendor-info .h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #8B4513;
+    font-style: italic;
+}
+
+.vendor .vendor-info .h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #6D4C41;
+    font-style: italic;
+}
+
+.vendor .vendor-info .p {
+    color: #6D4C41;
+    font-weight: bold;
+    transition: color 0.3s ease; /* transition */
+}
+
+/* Venue Section */
+.venue {
+    padding: 2rem 0; /* Reduced top and bottom padding */
+    margin-bottom: 0 !important;
+}
+
+.venue .venue-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.venue .venue-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.venue .venue-description {
+    width: 45%;
+    padding: 0 1rem;
+    text-align: left;
+    margin-right: 2%;
+}
+
+.venue .venue-description h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.venue .venue-description h3 {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.venue .venue-description p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.venue .venue-description .wpr-button-text {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.venue .venue-image {
+    width: 48%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.venue .venue-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.venue .venue-description h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #8B4513;
+    font-style: italic;
+}
+
+.venue .venue-description h3.wedding-venue {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #6D4C41;
+    font-style: italic;
+}
+
+.venue .venue-description .wpr-button-text {
+    color: #6D4C41;
+    font-weight: bold;
+    transition: color 0.3s ease; /* transition */
+}
+
+.venue .venue-description .wpr-button-text:hover {
+    color: #8D6E63;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background: #F8F4F0;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 0 0 calc(33.33% - 20px); /* 33.33% of the width */
+    padding: 0 10px;
+}
+
+.footer-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #666;
+    font-size: 1.5rem;
+}
+
+.social-icons a:hover {
+    color: #333;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #333;
+}
+
+.footer-section p a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section p a:hover {
+    color: #666;
+}
+
+/* Smaller screens */
+@media (max-width: 768px) {
+    .footer-section {
+        flex: 0 0 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Copyright */
+.copyright {
+    margin-top: 2rem;
+}
+
+.copyright p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Form Section */
+.form-container {
+    background-color: #FFF; /* Match with your site's background color */
+    padding: 20px; /* Further reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Adjusted max-width for better landscape fitting */
+    margin: 20px auto; /* Reduced margin for centering */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center align content vertically */
+    gap: 20px; /* Space between children */
+}
+
+.form-container h2 {
+    font-size: 2rem; /* Slightly smaller font size */
+    color: #5E503F; /* Match with your site's heading color */
+    margin-bottom: 15px; /* Reduced margin bottom */
+    text-align: center;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 10px; /* Further reduced margin bottom */
+}
+
+.form-group label {
+    font-size: 1.1rem; /* Slightly smaller font size */
+    color: #5E503F; /* Match with your site's text color */
+    margin-bottom: 6px; /* Reduced margin bottom */
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem; /* Smaller font size */
+    border: 1px solid #C68F52; /* Match with your site's accent color */
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #FFF; /* Match with your site's background color */
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #8D6E63; /* Accent color on focus */
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #C68F52; /* Match with your site's button color */
+    color: #FFF;
+    padding: 10px 20px;
+    font-size: 1rem; /* Smaller font size */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px; /* Further reduced margin top */
+}
+
+.btn:hover {
+    background-color: #A4753B; /* Darker shade on hover */
+}
